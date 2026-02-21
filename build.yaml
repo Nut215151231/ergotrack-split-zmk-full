@@ -1,0 +1,8 @@
+include:
+  - board: nice_nano
+    shield: ergo_track_split_left
+    snippet: studio-rpc-usb-uart
+  - board: nice_nano
+    shield: ergo_track_split_right
+  - board: nice_nano
+    shield: settings_reset
