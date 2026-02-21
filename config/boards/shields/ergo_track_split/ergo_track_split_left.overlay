@@ -40,6 +40,7 @@
         b-gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <80>;
         status = "okay";
+        #sensor-binding-cells = <0>;
     };
 
     left_encoder_2: encoder_left_2 {
@@ -48,6 +49,7 @@
         b-gpios = <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <80>;
         status = "okay";
+        #sensor-binding-cells = <0>;
     };
 
     sensors {
