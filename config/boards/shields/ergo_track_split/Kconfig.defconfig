@@ -1,51 +1,30 @@
 # SPDX-License-Identifier: MIT
 
-if SHIELD_ERGO_TRACK_SPLIT_LEFT
-
-config ZMK_KEYBOARD_NAME
-    default "ErgoTrackL"
-
-config ZMK_BLE
-    default y
-
-config ZMK_SETTINGS
-    default y
-
-endif
-
-if SHIELD_ERGO_TRACK_SPLIT_RIGHT
-
-config ZMK_KEYBOARD_NAME
-    default "ErgoTrackR"
-
-config ZMK_BLE
-    default y
-
-config ZMK_SETTINGS
-    default y
+if SHIELD_ERGO_TRACK_SPLIT || SHIELD_ERGO_TRACK_SPLIT_LEFT || SHIELD_ERGO_TRACK_SPLIT_RIGHT
 
 config PMW3610
-    default y
+    bool "PMW3610 trackball sensor"
+    default y if SHIELD_ERGO_TRACK_SPLIT_RIGHT
 
 config INPUT
-    default y
+    default y if SHIELD_ERGO_TRACK_SPLIT_RIGHT
 
 config ZMK_MOUSE
     default y
 
 config ZMK_POINTING
-    default y
+    default y if SHIELD_ERGO_TRACK_SPLIT_RIGHT
 
 config SPI
-    default y
+    default y if SHIELD_ERGO_TRACK_SPLIT_RIGHT
 
 config SPI_ASYNC
-    default y
+    default y if SHIELD_ERGO_TRACK_SPLIT_RIGHT
 
 config GPIO
     default y
 
-config ZMK_USB
+config ZMK_BLE
     default y
 
 endif
