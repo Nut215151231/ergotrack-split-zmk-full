@@ -8,7 +8,6 @@
 / {
     chosen {
         zmk,battery = &vbatt;
-        zmk,studio-rpc-uart = &cdc_acm_uart;
     };
 
     kscan0: kscan {
@@ -64,12 +63,6 @@
             gpios = <&gpio1 0 GPIO_ACTIVE_HIGH>;
             label = "FUNC_LED_LEFT";
         };
-    };
-};
-
-&zephyr_udc0 {
-    cdc_acm_uart: cdc_acm_uart {
-        compatible = "zephyr,cdc-acm-uart";
     };
 };
 
