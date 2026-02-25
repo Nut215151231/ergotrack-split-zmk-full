@@ -8,18 +8,12 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define BASE  0
-#define LOWER 1
-#define RAISE 2
-#define MOUSE 3
-#define FUNC  4
-
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
         func_layer {
-            if-layers = <LOWER RAISE>;
-            then-layer = <FUNC>;
+            if-layers = <1 2>;
+            then-layer = <4>;
         };
     };
 
