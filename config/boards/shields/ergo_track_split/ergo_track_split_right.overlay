@@ -61,15 +61,8 @@
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        /* 通常モード: カーソル移動 + AML(1秒でMOUSEレイヤー=3に入る) */
+        /* カーソル移動 + AML(1秒でMOUSEレイヤー=3に自動遷移) */
         input-processors = <&zip_xy_scaler 3 2 &zip_xy_swap_mapper &zip_temp_layer 3 1000>;
-
-        scroller {
-            /* MOUSEレイヤー(3)のときスクロールモード */
-            layers = <3>;
-            input-processors = <&zip_xy_scaler 1 8 &zip_xy_swap_mapper &zip_xy_to_scroll_mapper>;
-            process-next;
-        };
     };
 };
 
