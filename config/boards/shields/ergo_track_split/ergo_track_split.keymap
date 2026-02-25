@@ -35,7 +35,7 @@
             &mo RAISE &kp LCTRL &kp LGUI &mo LOWER &kp SPACE &none &none    &kp SPACE &kp RET &kp BACKSPACE &kp BACKSPACE &kp BSLH &kp DEL &none
             &kp RIGHT &kp UP &kp LEFT &kp DOWN &kp RIGHT &mkp MCLK &mkp MCLK  &none &none &kp LEFT &kp RET &kp DOWN &kp RIGHT &kp UP
             >;
-
+            /* 左enc1: 縦スクロール, 左enc2: 横スクロール, 右enc: ボリューム */
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp RIGHT LEFT &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
@@ -48,7 +48,6 @@
             &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
             &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
             >;
-
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp RIGHT LEFT &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
@@ -61,7 +60,6 @@
             &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
             &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
             >;
-
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp RIGHT LEFT &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
@@ -74,7 +72,6 @@
             &trans &trans &trans &trans &mkp LCLK &mkp RCLK &mkp MCLK  &mkp LCLK &mkp RCLK &mkp MCLK &trans &trans &trans &trans
             &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
             >;
-
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp RIGHT LEFT &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
@@ -90,7 +87,6 @@
             &trans &bt BT_PRV &trans &trans &bt BT_NXT &trans &trans
             &trans &trans &trans &trans &trans &trans &trans
             >;
-
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp RIGHT LEFT &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };

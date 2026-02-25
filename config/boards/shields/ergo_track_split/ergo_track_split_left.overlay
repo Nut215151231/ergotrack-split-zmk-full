@@ -6,10 +6,6 @@
 #include "ergo_track_split.dtsi"
 
 / {
-    chosen {
-        zmk,battery = &vbatt;
-    };
-
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
