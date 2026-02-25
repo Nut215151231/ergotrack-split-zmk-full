@@ -36,7 +36,7 @@
             &kp RIGHT &kp UP &kp LEFT &kp DOWN &kp RIGHT &mkp MCLK &mkp MCLK  &none &none &kp LEFT &kp RET &kp DOWN &kp RIGHT &kp UP
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp C_AC_SCROLL_RIGHT C_AC_SCROLL_LEFT &inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp K_SCROLL_RIGHT K_SCROLL_LEFT &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         lower_layer {
@@ -49,7 +49,7 @@
             &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp C_AC_SCROLL_RIGHT C_AC_SCROLL_LEFT &inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp K_SCROLL_RIGHT K_SCROLL_LEFT &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         raise_layer {
@@ -62,7 +62,7 @@
             &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp C_AC_SCROLL_RIGHT C_AC_SCROLL_LEFT &inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp K_SCROLL_RIGHT K_SCROLL_LEFT &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         mouse_layer {
@@ -75,7 +75,7 @@
             &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp C_AC_SCROLL_RIGHT C_AC_SCROLL_LEFT &inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp K_SCROLL_RIGHT K_SCROLL_LEFT &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         function_layer {
@@ -91,7 +91,7 @@
             &trans &trans &trans &trans &trans &trans &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp C_AC_SCROLL_RIGHT C_AC_SCROLL_LEFT &inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp K_SCROLL_RIGHT K_SCROLL_LEFT &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
