@@ -15,30 +15,7 @@
 #define MOUSE 3
 #define FUNC  4
 
-&msc {
-    x-input-code = <INPUT_REL_HWHEEL>;
-    y-input-code = <INPUT_REL_WHEEL>;
-    time-to-max-speed-ms = <300>;
-    acceleration-exponent = <0>;
-};
-
 / {
-    behaviors {
-        enc_scroll_v: enc_scroll_v {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-            tap-ms = <20>;
-        };
-
-        enc_scroll_h: enc_scroll_h {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
-            tap-ms = <20>;
-        };
-    };
-
     conditional_layers {
         compatible = "zmk,conditional-layers";
         func_layer {
@@ -101,7 +78,7 @@
         function_layer {
             bindings = <
             &bt BT_CLR_ALL &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &out OUT_TOG
-            &trans &trans &trans &trans &trans &trans &bootloader
+            &trans &trans &trans &trans &trans &bootloader &trans
             &out OUT_BLE &trans &trans &trans &trans &trans &trans
             &trans &trans &trans &trans &trans &trans &trans
             &out OUT_USB &trans &trans &trans &trans &trans &trans
