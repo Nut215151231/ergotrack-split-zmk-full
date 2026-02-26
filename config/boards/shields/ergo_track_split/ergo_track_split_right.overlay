@@ -4,14 +4,22 @@
  */
 
 #include "ergo_track_split.dtsi"
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
-#include <input/processors.dtsi>
 
 &default_transform {
     col-offset = <7>;
 };
 
 / {
+    chosen {
+        zmk,studio-rpc-uart = &cdc_acm_uart;
+    };
+
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
@@ -41,13 +49,12 @@
         b-gpios = <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <80>;
         status = "okay";
-        #sensor-binding-cells = <0>;
     };
 
     sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&right_encoder>;
-        triggers-per-rotation = <20>;
+        triggers-per-rotation = <4>;
     };
 
     leds {
@@ -58,11 +65,9 @@
         };
     };
 
-    trackball_listener: trackball_listener {
+    trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        /* カーソル移動 + AML(1秒でMOUSEレイヤー=3に自動遷移) */
-        input-processors = <&zip_xy_scaler 3 2 &zip_xy_swap_mapper &zip_temp_layer 3 1000>;
     };
 };
 
@@ -94,13 +99,18 @@
     cs-gpios = <&gpio1 7 GPIO_ACTIVE_LOW>;
 
     trackball: trackball@0 {
-        compatible = "pixart,pmw3610-alt";
+        compatible = "pixart,pmw3610";
         reg = <0>;
         spi-max-frequency = <2000000>;
-        irq-gpios = <&gpio0 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        cpi = <1600>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
+        motion-gpios = <&gpio0 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        zephyr,axis-x = <INPUT_REL_X>;
+        zephyr,axis-y = <INPUT_REL_Y>;
+        res-cpi = <1600>;
+    };
+};
+
+&zephyr_udc0 {
+    cdc_acm_uart: cdc_acm_uart {
+        compatible = "zephyr,cdc-acm-uart";
     };
 };

@@ -6,6 +6,11 @@
 #include "ergo_track_split.dtsi"
 
 / {
+    chosen {
+        zmk,battery = &vbatt;
+        zmk,studio-rpc-uart = &cdc_acm_uart;
+    };
+
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
@@ -35,7 +40,6 @@
         b-gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <80>;
         status = "okay";
-        #sensor-binding-cells = <0>;
     };
 
     left_encoder_2: encoder_left_2 {
@@ -44,13 +48,12 @@
         b-gpios = <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <80>;
         status = "okay";
-        #sensor-binding-cells = <0>;
     };
 
     sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder_1>, <&left_encoder_2>;
-        triggers-per-rotation = <20>;
+        triggers-per-rotation = <4>;
     };
 
     leds {
@@ -59,6 +62,12 @@
             gpios = <&gpio1 0 GPIO_ACTIVE_HIGH>;
             label = "FUNC_LED_LEFT";
         };
+    };
+};
+
+&zephyr_udc0 {
+    cdc_acm_uart: cdc_acm_uart {
+        compatible = "zephyr,cdc-acm-uart";
     };
 };
 
