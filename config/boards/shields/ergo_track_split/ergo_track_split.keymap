@@ -15,6 +15,13 @@
 #define MOUSE 3
 #define FUNC  4
 
+&msc {
+    x-input-code = <INPUT_REL_HWHEEL>;
+    y-input-code = <INPUT_REL_WHEEL>;
+    time-to-max-speed-ms = <300>;
+    acceleration-exponent = <0>;
+};
+
 / {
     behaviors {
         enc_scroll_v: enc_scroll_v {
