@@ -15,6 +15,21 @@
 #define FUNC  4
 
 / {
+    behaviors {
+        enc_scroll_v: enc_scroll_v {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            tap-ms = <20>;
+        };
+        enc_scroll_h: enc_scroll_h {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
+            tap-ms = <20>;
+        };
+    };
+
     conditional_layers {
         compatible = "zmk,conditional-layers";
         func_layer {
@@ -35,7 +50,7 @@
             &mo RAISE &kp LCTRL &kp LGUI &mo LOWER &kp SPACE &none &none    &kp SPACE &kp RET &kp BACKSPACE &kp BACKSPACE &kp BSLH &kp DEL &none
             &kp RIGHT &kp UP &kp LEFT &kp DOWN &kp RIGHT &mkp MCLK &mkp MCLK  &none &none &kp LEFT &kp RET &kp DOWN &kp RIGHT &kp UP
             >;
-            sensor-bindings = <&inc_dec_msc SCRL_UP SCRL_DOWN &inc_dec_msc SCRL_RIGHT SCRL_LEFT &inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&enc_scroll_v &enc_scroll_h &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         lower_layer {
@@ -47,7 +62,7 @@
             &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
             &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
             >;
-            sensor-bindings = <&inc_dec_msc SCRL_UP SCRL_DOWN &inc_dec_msc SCRL_RIGHT SCRL_LEFT &inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&enc_scroll_v &enc_scroll_h &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         raise_layer {
@@ -59,7 +74,7 @@
             &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
             &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
             >;
-            sensor-bindings = <&inc_dec_msc SCRL_UP SCRL_DOWN &inc_dec_msc SCRL_RIGHT SCRL_LEFT &inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&enc_scroll_v &enc_scroll_h &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         mouse_layer {
@@ -71,7 +86,7 @@
             &trans &trans &trans &trans &mkp LCLK &mkp RCLK &mkp MCLK  &mkp LCLK &mkp RCLK &mkp MCLK &trans &trans &trans &trans
             &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
             >;
-            sensor-bindings = <&inc_dec_msc SCRL_UP SCRL_DOWN &inc_dec_msc SCRL_RIGHT SCRL_LEFT &inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&enc_scroll_v &enc_scroll_h &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         function_layer {
@@ -86,7 +101,7 @@
             &trans &bt BT_PRV &trans &trans &bt BT_NXT &trans &trans
             &trans &trans &trans &trans &trans &trans &trans
             >;
-            sensor-bindings = <&inc_dec_msc SCRL_UP SCRL_DOWN &inc_dec_msc SCRL_RIGHT SCRL_LEFT &inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&enc_scroll_v &enc_scroll_h &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
