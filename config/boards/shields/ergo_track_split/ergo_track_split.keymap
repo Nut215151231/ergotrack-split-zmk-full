@@ -15,6 +15,10 @@
 #define MOUSE 3
 #define FUNC  4
 
+&sensors { triggers-per-rotation = <20>; };
+&left_encoder_1 { steps = <20>; };
+&left_encoder_2 { steps = <20>; };
+
 &msc {
     x-input-code = <INPUT_REL_HWHEEL>;
     y-input-code = <INPUT_REL_WHEEL>;
