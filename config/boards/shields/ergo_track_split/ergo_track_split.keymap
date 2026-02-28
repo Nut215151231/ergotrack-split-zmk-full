@@ -8,7 +8,7 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 400
 
 #define BASE  0
 #define LOWER 1
@@ -53,7 +53,7 @@
             &kp LALT &kp CAPS &kp A &kp S &kp D &kp F &kp G            &kp H &kp J &kp K &kp L &kp SEMI &kp APOS &kp RET
                      &kp LSHFT &kp Z &kp X &kp C &kp V &kp B           &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RSHFT
             &mo RAISE &kp LCTRL &kp LGUI &mo LOWER &kp SPACE &kp LALT &kp LALT    &kp SPACE &kp RET &kp RET &kp BACKSPACE &kp BSLH &kp DEL &mo RAISE
-            &kp DOWN &kp UP &kp LEFT &kp DOWN &kp RIGHT &mkp MCLK &mkp MCLK  &none &none &kp LEFT &kp RET &kp DOWN &kp RIGHT &kp UP
+            &kp RIGHT &kp UP &kp LEFT &kp DOWN &kp DOWN &mkp MCLK &mkp MCLK  &none &none &kp LEFT &kp RET &kp DOWN &kp RIGHT &kp UP
             >;
             sensor-bindings = <&enc_scroll_v &enc_scroll_h &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
