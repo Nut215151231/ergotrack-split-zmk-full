@@ -37,17 +37,17 @@
 
     right_encoder: encoder_right {
         compatible = "alps,ec11";
-        a-gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <80>;
+        a-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        b-gpios = <&gpio0 22 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        steps = <24>;
         status = "okay";
         #sensor-binding-cells = <0>;
     };
 
-    sensors {
+    right_sensors: sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&right_encoder>;
-        triggers-per-rotation = <12>;
+        triggers-per-rotation = <6>;
     };
 
     leds {
