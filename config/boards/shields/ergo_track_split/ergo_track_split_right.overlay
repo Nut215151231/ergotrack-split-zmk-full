@@ -35,21 +35,6 @@
             , <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
     };
 
-    right_encoder: encoder_right {
-        compatible = "alps,ec11";
-        a-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        b-gpios = <&gpio0 22 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        steps = <24>;
-        status = "okay";
-        #sensor-binding-cells = <0>;
-    };
-
-    right_sensors: sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&right_encoder>;
-        triggers-per-rotation = <6>;
-    };
-
     leds {
         compatible = "gpio-leds";
         func_led: led_func {
@@ -64,6 +49,8 @@
         input-processors = <&zip_xy_scaler 3 2 &zip_xy_swap_mapper &zip_temp_layer 3 1000>;
     };
 };
+
+&right_encoder { status = "okay"; };
 
 &pinctrl {
     spi0_default: spi0_default {
