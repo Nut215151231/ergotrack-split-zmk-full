@@ -40,5 +40,6 @@
 
 &left_encoder_1 { status = "okay"; };
 &left_encoder_2 { status = "okay"; };
+&right_encoder { status = "okay"; };
 
 &spi0 { status = "disabled"; };
