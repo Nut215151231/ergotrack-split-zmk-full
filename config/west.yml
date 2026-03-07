@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: badjeff
       url-base: https://github.com/badjeff
+    - name: nut215151231
+      url-base: https://github.com/Nut215151231
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -13,7 +15,7 @@ manifest:
       remote: badjeff
       revision: main
     - name: zmk-battery-led
-      remote: local         
-      path: zmk-battery-led
+      remote: nut215151231
+      revision: main
   self:
     path: config

@@ -33,6 +33,12 @@
             bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
             tap-ms = <20>;
         };
+
+        battery_report: battery_report {
+            compatible = "zmk,behavior-battery-led";
+            label = "BATTERY_REPORT";
+            #binding-cells = <0>;
+        };
     };
 
     conditional_layers {
