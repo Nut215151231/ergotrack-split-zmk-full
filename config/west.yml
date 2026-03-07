@@ -12,5 +12,8 @@ manifest:
     - name: zmk-pmw3610-driver
       remote: badjeff
       revision: main
+    - name: zmk-battery-led
+      remote: local         
+      path: zmk-battery-led
   self:
     path: config
