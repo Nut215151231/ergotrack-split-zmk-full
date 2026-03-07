@@ -91,3 +91,9 @@
 };
 
 &right_encoder { status = "okay"; };
+
+/ {
+    aliases {
+        battery-led = &func_led;
+    };
+};
