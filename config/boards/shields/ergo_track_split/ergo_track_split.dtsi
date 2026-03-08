@@ -50,9 +50,9 @@
 
     left_encoder_2: encoder_left_2 {
         compatible = "alps,ec11";
-        a-gpios = <&gpio1 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        b-gpios = <&gpio0 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        steps = <14>;
+        a-gpios = <&gpio0 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        b-gpios = <&gpio1 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        steps = <16>;
         status = "disabled";
         #sensor-binding-cells = <0>;
     };
