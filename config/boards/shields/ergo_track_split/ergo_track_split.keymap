@@ -8,6 +8,8 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
 
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 80
+
 #define BASE  0
 #define LOWER 1
 #define RAISE 2
