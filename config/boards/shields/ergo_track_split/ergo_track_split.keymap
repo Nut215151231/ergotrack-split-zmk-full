@@ -30,7 +30,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENC_SCROLL_H";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
+            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
             tap-ms = <20>;
         };
 
