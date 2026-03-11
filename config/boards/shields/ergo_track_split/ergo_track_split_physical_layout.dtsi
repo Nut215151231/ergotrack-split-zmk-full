@@ -2,9 +2,6 @@
 // Generated from keyboard-layoutFNL.json
 // 82 keys + 3 encoders = 85 total
 
-#include <dt-bindings/zmk/matrix_transform.h>
-#include <physical_layouts.dtsi>
-
 / {
     ergo_track_physical_layout: ergo_track_physical_layout {
         compatible = "zmk,physical-layout";
