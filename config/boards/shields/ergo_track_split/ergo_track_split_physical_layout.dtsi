@@ -76,8 +76,8 @@
             , <&key_physical_attrs 100 100   750  325      0     0    0>  // L 4,0
             , <&key_physical_attrs 100 100  1200  125      0     0    0>  // R 4,0
             , <&key_physical_attrs 100 100  1200  225      0     0    0>  // R 4,1
-            , <&key_physical_attrs 100 100  1165  345  -1500  1718  425>  // R 4,2
-            , <&key_physical_attrs 100 100  1275  405   -750  1718  425>  // R 4,3
+            , <&key_physical_attrs 100 100  1165  345 (-1500) 1718  425>  // R 4,2
+            , <&key_physical_attrs 100 100  1275  405  (-750) 1718  425>  // R 4,3
             , <&key_physical_attrs 100 100  1700  438      0     0    0>  // R 4,4
             , <&key_physical_attrs 100 100  1800  438      0     0    0>  // R 4,5
             , <&key_physical_attrs 100 100  1200  325      0     0    0>  // R 4,6
