@@ -44,16 +44,18 @@
     };
 
     trackball_listener: trackball_listener {
-    compatible = "zmk,input-listener";
-    device = <&trackball>;
-    input-processors = <&zip_xy_scaler 3 2 &zip_xy_swap_mapper &zip_temp_layer 3 1000>;
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+        input-processors = <&zip_xy_scaler 3 2 &zip_xy_swap_mapper &zip_temp_layer 3 1000>;
+    };
+};
 
+&trackball_listener {
     snipe {
         layers = <5>;
         input-processors = <&zip_xy_scaler 1 4 &zip_xy_swap_mapper>;
     };
 };
-
 
 &pinctrl {
     spi0_default: spi0_default {
