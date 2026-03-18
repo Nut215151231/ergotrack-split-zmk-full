@@ -15,6 +15,7 @@
 #define RAISE 2
 #define MOUSE 3
 #define FUNC  4
+#define SNIPE 5
 
 / {
     behaviors {
@@ -114,5 +115,17 @@
             >;
             sensor-bindings = <&enc_scroll_h &enc_scroll_v &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
+
+snipe_layer {
+    bindings = <
+    &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
+             &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
+    >;
+    sensor-bindings = <&enc_scroll_h &enc_scroll_v &inc_dec_kp C_VOL_UP C_VOL_DN>;
+};
     };
 };
