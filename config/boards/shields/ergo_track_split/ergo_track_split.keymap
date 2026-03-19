@@ -94,7 +94,7 @@
             &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
             &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
             &trans &trans &trans &trans &trans &mo SNIPE &trans     &mkp LCLK &mkp LCLK &mkp RCLK &mkp MCLK &trans &trans &trans
-                   &trans &trans &trans &trans &trans &trans        &mo SNIPE &mkp LCLK &mkp RCLK &mkp MCLK &trans &trans
+                   &trans &trans &trans &trans &trans &trans        &mo SNIPE &mo SNIPE &mkp RCLK &mkp MCLK &trans &trans
             &trans &trans &trans &trans &mkp LCLK &mkp RCLK &mkp MCLK  &mkp LCLK &mkp RCLK &mkp MCLK &trans &trans &trans &trans
             &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
             >;
