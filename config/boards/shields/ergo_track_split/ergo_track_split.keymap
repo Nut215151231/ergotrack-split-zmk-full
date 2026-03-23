@@ -35,6 +35,22 @@
             tap-ms = <20>;
         };
 
+        enc_scroll_v_fast: enc_scroll_v_fast {
+            compatible = "zmk,behavior-sensor-rotate";
+         label = "ENC_SCROLL_V_FAST";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            tap-ms = <5>;
+        };
+
+        enc_scroll_h_fast: enc_scroll_h_fast {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENC_SCROLL_H_FAST";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
+            tap-ms = <5>;
+        };
+
         battery_report: battery_report {
             compatible = "zmk,behavior-battery-led";
             label = "BATTERY_REPORT";
@@ -74,7 +90,7 @@
             &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
             &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
             >;
-            sensor-bindings = <&enc_scroll_h &enc_scroll_v &inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&enc_scroll_h_fast &enc_scroll_v_fast &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         raise_layer {
