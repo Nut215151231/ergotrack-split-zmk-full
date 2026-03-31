@@ -100,10 +100,10 @@
         mouse_layer {
             bindings = <
             &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
+            &trans &trans &trans &trans &trans &trans &trans        &trans &mkp MCLK &mkp MCLK &trans &trans &trans &trans
+            &trans &trans &trans &trans &trans &mo SNIPE &trans     &trans &mkp LCLK &mkp RCLK &mo SNIPE &mo SNIPE &trans &trans
+                   &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans
             &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
-            &trans &trans &trans &trans &trans &mo SNIPE &trans     &mkp LCLK &mkp LCLK &mkp RCLK &mkp MCLK &mo SNIPE &mo SNIPE &trans
-                   &trans &trans &trans &trans &trans &trans        &mo SNIPE &mo SNIPE &mkp RCLK &mkp MCLK &trans &trans
-            &trans &trans &trans &trans &mkp LCLK &mkp RCLK &mkp MCLK  &mkp LCLK &mkp RCLK &mkp MCLK &trans &trans &trans &trans
             &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
             >;
             sensor-bindings = <&enc_scroll_h &enc_scroll_v &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -124,9 +124,9 @@
         snipe_layer {
             bindings = <
             &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
-            &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
-            &trans &trans &trans &trans &trans &mo SNIPE &trans     &mkp LCLK &mkp LCLK &mkp RCLK &mkp MCLK &mo SNIPE &mo SNIPE &trans
-                   &trans &trans &trans &trans &trans &trans        &mo SNIPE &mo SNIPE  &trans &trans &trans &trans 
+            &trans &trans &trans &trans &trans &trans &trans        &trans &mkp MCLK &mkp MCLK &trans &trans &trans &trans
+            &trans &trans &trans &trans &trans &mo SNIPE &trans     &trans &mkp LCLK &mkp RCLK &mo SNIPE &mo SNIPE &trans &trans
+                   &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans
             &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
             &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
     >;
