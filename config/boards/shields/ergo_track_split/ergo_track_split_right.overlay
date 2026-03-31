@@ -11,6 +11,10 @@
     col-offset = <7>;
 };
 
+&zip_temp_layer {
+    require-prior-idle-ms = <200>;
+};
+
 / {
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
