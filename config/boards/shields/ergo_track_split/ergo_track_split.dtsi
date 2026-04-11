@@ -36,9 +36,9 @@
 
     vbatt: vbatt {
         compatible = "zmk,battery-voltage-divider";
-        io-channels = <&adc 12>;
+        io-channels = <&adc 0>;
         output-ohms = <2000000>;
-        full-ohms = <(2000000 + 806000)>;
+        full-ohms = <(2000000 + 2000000)>;
     };
 
     left_encoder_1: encoder_left_1 {
