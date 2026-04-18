@@ -28,23 +28,9 @@
             , <&gpio0 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
     };
-
-    leds {
-        compatible = "gpio-leds";
-        func_led: led_func {
-            gpios = <&gpio1 0 GPIO_ACTIVE_HIGH>;
-            label = "FUNC_LED_LEFT";
-        };
-    };
 };
 
 &left_encoder_1 { status = "okay"; };
 &left_encoder_2 { status = "okay"; };
 
 &spi0 { status = "disabled"; };
-
-/ {
-    aliases {
-        battery-led = &func_led;
-    };
-};

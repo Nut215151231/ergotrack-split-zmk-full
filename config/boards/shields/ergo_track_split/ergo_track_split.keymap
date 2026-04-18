@@ -42,12 +42,6 @@
         bindings = <&kp PAGE_DOWN>, <&kp PAGE_UP>;
         tap-ms = <20>;
         };
-
-        battery_report: battery_report {
-            compatible = "zmk,behavior-battery-led";
-            label = "BATTERY_REPORT";
-            #binding-cells = <0>;
-        };
     };
 
     conditional_layers {
@@ -114,8 +108,8 @@
             &bt BT_CLR_ALL &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &out OUT_TOG    &trans &trans &trans &trans &trans &trans &trans
             &bt BT_CLR_ALL &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &out OUT_TOG    &trans &trans &trans &trans &trans &trans &trans
             &out OUT_BLE &trans &trans &trans &trans &bootloader &trans       &trans &trans &trans &trans &trans &trans &trans
-                   &trans &trans &trans &trans &trans &battery_report             &trans &trans &trans &trans &trans &trans
-            &out OUT_USB &trans &trans &trans &trans &trans &trans       &trans &bt BT_PRV &trans &trans &bt BT_NXT &battery_report &trans
+                   &trans &trans &trans &trans &trans &trans             &trans &trans &trans &trans &trans &trans
+            &out OUT_USB &trans &trans &trans &trans &trans &trans       &trans &bt BT_PRV &trans &trans &bt BT_NXT &trans &trans
             &trans &trans &trans &trans &trans &trans &trans             &trans &trans &trans &trans &trans &trans &trans
             >;
             sensor-bindings = <&enc_scroll_h &enc_scroll_v &inc_dec_kp C_VOL_UP C_VOL_DN>;

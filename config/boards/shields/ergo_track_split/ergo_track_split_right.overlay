@@ -39,14 +39,6 @@
             , <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
     };
 
-    leds {
-        compatible = "gpio-leds";
-        func_led: led_func {
-            gpios = <&gpio1 13 GPIO_ACTIVE_HIGH>;
-            label = "FUNC_LED_RIGHT";
-        };
-    };
-
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
@@ -101,9 +93,3 @@
 };
 
 &right_encoder { status = "okay"; };
-
-/ {
-    aliases {
-        battery-led = &func_led;
-    };
-};
