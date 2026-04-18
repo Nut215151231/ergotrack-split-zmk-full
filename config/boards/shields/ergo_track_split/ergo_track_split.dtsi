@@ -37,7 +37,7 @@
         compatible = "alps,ec11";
         a-gpios = <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH  | GPIO_PULL_UP)>;
-        steps = <24>;
+        steps = <12>;
         status = "disabled";
         #sensor-binding-cells = <0>;
     };
@@ -46,7 +46,7 @@
         compatible = "alps,ec11";
         a-gpios = <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <24>;
+        steps = <12>;
         status = "disabled";
         #sensor-binding-cells = <0>;
     };
@@ -55,7 +55,7 @@
         compatible = "alps,ec11";
         a-gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH  | GPIO_PULL_UP)>;
         b-gpios = <&gpio0 22 (GPIO_ACTIVE_HIGH  | GPIO_PULL_UP)>;
-        steps = <48>;
+        steps = <24>;
         status = "disabled";
         #sensor-binding-cells = <0>;
     };
